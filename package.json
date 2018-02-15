@@ -1,0 +1,14 @@
+{
+  "name": "glitchbitch",
+  "version": "1.0.0",
+  "description": "video player and computer",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "@oliviacpu",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^1.7.4"
+  }
+}
