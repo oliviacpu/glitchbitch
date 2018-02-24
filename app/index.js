@@ -15,12 +15,12 @@ var fileManager = blessed.filemanager({
   keys: true,
   style: {
     item: {
-      fg: 'purple',
+      fg: '#5F4B8B',
       bg: 'white',
     },
     selected: {
       fg: 'white',
-      bg: 'purple',
+      bg: '#5F4B8B',
     }
   }
 });
