@@ -1,6 +1,16 @@
 var blessed = require('blessed');
 var childProcess = require('child_process');
 
+var rpio = require('rpio');
+rpio.open(23, rpio.INPUT, rpio.PULL_DOWN);
+
+function pollcb(pin) {
+  var state = rpio.read(pin) ? 'pressed' : 'released';
+  console.log('Button event on P%d (button currently %s)', pin, state);
+}
+
+rpio.poll(23, pollcb);
+
 // Create a screen object.
 var screen = blessed.screen({
   smartCSR: true,
