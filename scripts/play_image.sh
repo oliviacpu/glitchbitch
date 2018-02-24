@@ -1,3 +1,3 @@
 #!/bin/bash
 
-fbi -d /dev/fb1 -T 1 -noverbose -a Mystery-100x100.jpg
+fbi -d /dev/fb0 -T 1 -noverbose -a $1
