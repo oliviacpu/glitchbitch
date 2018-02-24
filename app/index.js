@@ -14,9 +14,13 @@ var fileManager = blessed.filemanager({
   tags: true,
   keys: true,
   style: {
-    fg: 'purple',
-    hover: {
-      bg: 'white'
+    item: {
+      fg: 'purple',
+      bg: 'white',
+    },
+    selected: {
+      fg: 'white',
+      bg: 'purple',
     }
   }
 });
