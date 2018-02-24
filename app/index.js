@@ -13,18 +13,6 @@ var fileManager = blessed.filemanager({
   height: '100%',
   tags: true,
   keys: true,
-  style: {
-    fg: '#5F4B8B',
-    bg: 'white',
-    item: {
-      fg: '#5F4B8B',
-      bg: 'white',
-    },
-    selected: {
-      fg: 'white',
-      bg: '#5F4B8B',
-    }
-  }
 });
 
 // Append our filemanager to the box.
