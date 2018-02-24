@@ -44,11 +44,7 @@ screen.key(['escape', 'q', 'C-c'], function(ch, key) {
 fileManager.refresh();
 
 fileManager.pick(function(err, file) {
-  var child = childProcess.spawn('/home/pi/glitchbitch/scripts/play_video.sh ',[file], {
-    detached: true,
-    stdio: 'ignore'
-  });
-  child.unref();
+  childProcess.exec('/home/pi/glitchbitch/scripts/play_video.sh ' + file);
 });
 
 // Focus our element.
