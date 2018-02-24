@@ -34,7 +34,7 @@ fileManager.refresh();
 
 fileManager.pick(function(err, file) {
   console.log('file: ', file);
-  childProcess.exec('./scripts/play_video.sh ' + file);
+  childProcess.exec('/home/pi/glitchbitch/scripts/play_video.sh ' + file);
 });
 
 // Focus our element.
