@@ -2,7 +2,7 @@ var blessed = require('blessed');
 var childProcess = require('child_process');
 
 var rpio = require('rpio');
-rpio.open(23, rpio.INPUT, rpio.PULL_DOWN);
+rpio.open(23, rpio.INPUT, rpio.PULL_UP);
 
 function pollcb(pin) {
   var state = rpio.read(pin) ? 'pressed' : 'released';
@@ -44,7 +44,7 @@ screen.key(['escape', 'q', 'C-c'], function(ch, key) {
 fileManager.refresh();
 
 fileManager.pick(function(err, file) {
-  childProcess.execFile('/home/pi/glitchbitch/scripts/play_video.sh ', [file]);
+  childProcess.exec('/home/pi/glitchbitch/scripts/play_video.sh ' + file);
 });
 
 // Focus our element.
