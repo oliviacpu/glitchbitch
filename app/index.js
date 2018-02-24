@@ -1,5 +1,6 @@
 var blessed = require('blessed');
 var childProcess = require('child_process');
+
 // Create a screen object.
 var screen = blessed.screen({
   smartCSR: true,
@@ -31,9 +32,9 @@ screen.key(['escape', 'q', 'C-c'], function(ch, key) {
 
 // Refresh the file manager.
 fileManager.refresh();
+fileManager.unshiftItem();
 
 fileManager.pick(function(err, file) {
-  console.log('file: ', file);
   childProcess.exec('/home/pi/glitchbitch/scripts/play_video.sh ' + file);
 });
 
