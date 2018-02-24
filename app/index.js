@@ -16,7 +16,7 @@ var fileManager = blessed.filemanager({
   style: {
     selected: {
       bg: 'blue',
-      fg: 'white,
+      fg: 'white',
     },
   }
 });
