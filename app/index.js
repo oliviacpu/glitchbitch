@@ -7,39 +7,22 @@ var screen = blessed.screen({
 
 screen.title = 'glitchbitch';
 
-// Create a box perfectly centered horizontally and vertically.
-var box = blessed.box({
-  width: '100%',
-  height: '100%',
-  tags: true,
-  border: {
-    type: 'line'
-  },
-  style: {
-    fg: 'white',
-    bg: 'magenta',
-    border: {
-      fg: '#f0f0f0'
-    },
-    hover: {
-      bg: 'green'
-    }
-  }
-});
-
-// Append our box to the screen.
-screen.append(box);
-
 var fileManager = blessed.filemanager({
   cwd: './',
   width: '100%',
   height: '100%',
   tags: true,
   keys: true,
+  style: {
+    fg: 'purple',
+    hover: {
+      bg: 'white'
+    }
+  }
 });
 
 // Append our filemanager to the box.
-box.append(fileManager);
+screen.append(fileManager);
 
 // Quit on Escape, q, or Control-C.
 screen.key(['escape', 'q', 'C-c'], function(ch, key) {
