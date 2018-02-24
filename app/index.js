@@ -9,11 +9,8 @@ screen.title = 'glitchbitch';
 
 // Create a box perfectly centered horizontally and vertically.
 var box = blessed.box({
-  top: 'center',
-  left: 'center',
-  width: '50%',
-  height: '50%',
-  content: 'Hello {bold}world{/bold}!',
+  width: '100%',
+  height: '100%',
   tags: true,
   border: {
     type: 'line'
@@ -35,8 +32,6 @@ screen.append(box);
 
 var fileManager = blessed.filemanager({
   cwd: './',
-  top: 'center',
-  left: 'center',
   width: '100%',
   height: '100%',
   tags: true,
