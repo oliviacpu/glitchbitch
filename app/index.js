@@ -14,6 +14,8 @@ var fileManager = blessed.filemanager({
   tags: true,
   keys: true,
   style: {
+    fg: '#5F4B8B',
+    bg: 'white',
     item: {
       fg: '#5F4B8B',
       bg: 'white',
