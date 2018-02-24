@@ -32,7 +32,7 @@ screen.key(['escape', 'q', 'C-c'], function(ch, key) {
 
 // Refresh the file manager.
 fileManager.refresh();
-fileManager.unshiftItem();
+fileManager.shiftItem();
 
 fileManager.pick(function(err, file) {
   childProcess.exec('/home/pi/glitchbitch/scripts/play_video.sh ' + file);
