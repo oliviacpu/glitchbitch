@@ -1,5 +1,5 @@
 var blessed = require('blessed');
-
+var { exec } = require('child_process');
 // Create a screen object.
 var screen = blessed.screen({
   smartCSR: true,
@@ -8,7 +8,7 @@ var screen = blessed.screen({
 screen.title = 'glitchbitch';
 
 var fileManager = blessed.filemanager({
-  cwd: './',
+  cwd: './media',
   width: '100%',
   height: '100%',
   tags: true,
@@ -34,6 +34,7 @@ fileManager.refresh();
 
 fileManager.pick(function(err, file) {
   console.log('file: ', file);
+  exec(`./scripts/play_video.sh ${file}`);
 });
 
 // Focus our element.
